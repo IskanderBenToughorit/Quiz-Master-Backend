@@ -9,6 +9,8 @@ const authRoutes = require('./routes/auth');
 const quizRoutes = require('./routes/quiz');
 const userRoutes = require('./routes/user');
 const tournamentRoutes = require('./routes/tournament');
+const statisticsRoutes = require('./routes/statistics');
+const duoRoutes = require('./routes/duo');
 
 // Load environment variables
 dotenv.config();
@@ -38,6 +40,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/quiz', quizRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/tournament', tournamentRoutes);
+app.use('/api/statistics', statisticsRoutes);
+app.use('/api/duo', require('./routes/duo'));
+
+
 
 // Socket.io connection handler
 io.on('connection', (socket) => {
