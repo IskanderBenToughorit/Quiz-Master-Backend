@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Duo = require("../models/Duo");
+const Duo = require("../models/duo");
 const GameSession = require("../models/GameSession");
 const { protect } = require("../middleware/auth");
 const crypto = require("crypto");
